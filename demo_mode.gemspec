@@ -22,6 +22,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'cli-ui'
   s.add_dependency 'rails', '>= 6.1'
-  s.add_dependency 'sprockets-rails'
   s.add_dependency 'typedjs-rails'
 end
