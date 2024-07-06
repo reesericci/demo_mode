@@ -47,9 +47,9 @@ module DemoMode
       if block
         @icon = block
       elsif name_or_path
-        @path = name_or_path.is_a?(Symbol) ? "demo_mode/icon--#{name_or_path}" : name_or_path
+        @path = name_or_path.is_a?(Symbol) ? "demo_mode/icon--#{name_or_path}.png" : name_or_path
       else
-        @path ||= 'demo_mode/icon--user'
+        @path ||= 'demo_mode/icon--user.png'
         path = @path
         @icon ||= ->(_) { image_tag path }
       end
