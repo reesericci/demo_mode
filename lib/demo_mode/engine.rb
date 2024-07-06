@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require 'sprockets/railtie'
-
 module DemoMode
   class Engine < ::Rails::Engine
     isolate_namespace DemoMode
@@ -23,12 +21,12 @@ module DemoMode
     end
 
     initializer 'demo_mode.assets' do |app|
-      app.config.assets.precompile << 'demo_mode/application.css'
-      app.config.assets.precompile << 'demo_mode/application.js'
-      app.config.assets.precompile << 'demo_mode/icon--user.png'
-      app.config.assets.precompile << 'demo_mode/icon--users.png'
-      app.config.assets.precompile << 'demo_mode/icon--tophat.png'
-      app.config.assets.precompile << 'demo_mode/loader.png'
+      app.config.assets.paths << Rails.root.join('app/assets/demo_mode/application.css')
+      app.config.assets.paths << Rails.root.join('app/assets/demo_mode/application.js')
+      app.config.assets.paths << Rails.root.join('app/assets/demo_mode/icon--user.png')
+      app.config.assets.paths << Rails.root.join('app/assets/demo_mode/icon--users.png')
+      app.config.assets.paths << Rails.root.join('app/assets/demo_mode/icon--tophat.png')
+      app.config.assets.paths << Rails.root.join('app/assets/demo_mode/loader.png')
     end
   end
 end
