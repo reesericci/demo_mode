@@ -3,3 +3,6 @@
  *= require ./normalize
  *= require ./default
  */
+
+@import url("default.css")
+@import url("normalize.css")
